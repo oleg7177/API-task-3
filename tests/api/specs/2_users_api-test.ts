@@ -146,9 +146,9 @@ describe(`Users controller`, () => {
             { email: baseEmail, password: baseEmail },
         ];
     
-        invalidDataSet.forEach((credentials) => {
-            it(`should not login using invalid credentials : '${credentials.email}' + '${credentials.password}'`, async () => {
-                let response = await auth.login(credentials.email, credentials.password);
+        invalidDataSet.forEach((dataSet) => {
+            it(`should not login using invalid credentials : '${dataSet.email}' + '${dataSet.password}'`, async () => {
+                let response = await auth.login(dataSet.email, dataSet.password);
     
                 checkStatusCode(response, 401); 
                 checkResponseTime(response, 1000);

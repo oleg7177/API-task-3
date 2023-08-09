@@ -13,6 +13,6 @@ module.exports = {
     ],
     timeout: 100000,
     parallel: false,
-    //reporter: "mocha-multi-reporters",
-    //"reporter-options": "configFile=reporter.config.json",
+    reporter: "mocha-multi-reporters",
+    "reporter-options": "configFile=reporter.config.json", 
 };
